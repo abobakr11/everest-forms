@@ -47,7 +47,7 @@ class EVF_Admin_Editor {
 		// If we have made it, then load the JS.
 		wp_enqueue_script( 'everest-forms-editor' );
 
-		add_action( 'admin_footer', array( $this, 'shortcode_modal' ) );
+		add_action( 'admin_print_footer_scripts', array( $this, 'shortcode_modal' ) );
 	}
 
 	/**
