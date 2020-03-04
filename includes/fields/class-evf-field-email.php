@@ -349,7 +349,7 @@ class EVF_Field_Email extends EVF_Form_Fields {
 				update_option( 'evf_validation_error', 'yes' );
 			}
 
-			if ( isset( $field_submit ) && ! is_email( $field_submit ) ) {
+			if ( isset( $field_submit ) && ! is_email( $field_submit ) && ! empty( $field_submit ) ) {
 				evf()->task->errors[ $form_id ][ $field_id ] = $invalid_email;
 				update_option( 'evf_validation_error', 'yes' );
 				return;
@@ -377,7 +377,7 @@ class EVF_Field_Email extends EVF_Form_Fields {
 				}
 			}
 
-			if ( isset( $field_submit['primary'] ) && ! is_email( $field_submit['primary'] ) ) {
+			if ( isset( $field_submit['primary'] ) && ! is_email( $field_submit['primary'] ) && ! empty( $field_submit['primary'] ) ) {
 				evf()->task->errors[ $form_id ][ $field_id ]['primary'] = $invalid_email;
 				update_option( 'evf_validation_error', 'yes' );
 				return;
