@@ -271,7 +271,7 @@ jQuery( function ( $ ) {
 
 				$this.validate({
 					messages: error_messages,
-					ignore: '',
+					ignore: '.input-text:hidden',
 					errorClass: 'evf-error',
 					validClass: 'evf-valid',
 					errorPlacement: function( error, element ) {
